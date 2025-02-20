@@ -19,6 +19,30 @@
             align-items: center;
             background-color: #f8f9fa;
             color: #2d3436;
+            position: relative;
+            overflow: hidden;
+        }
+
+        body::before,
+        body::after {
+            content: '';
+            position: fixed;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(78, 204, 163, 0.25) 0%, rgba(248, 249, 250, 0) 70%);
+            pointer-events: none;
+            animation: pulse 8s ease-in-out infinite;
+        }
+
+        body::before {
+            top: -150px;
+            left: -150px;
+            animation-delay: -4s;
+        }
+
+        body::after {
+            bottom: -150px;
+            right: -150px;
         }
 
         .container {
@@ -64,6 +88,36 @@
                 transform: translateY(0px);
             }
         }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1) translate(0, 0);
+            }
+            50% {
+                transform: scale(1.1) translate(20px, 20px);
+            }
+            100% {
+                transform: scale(1) translate(0, 0);
+            }
+        }
+
+        .contact {
+            margin-top: 2rem;
+            font-size: 1.1rem;
+            color: #636e72;
+            opacity: 0.8;
+            transition: opacity 0.3s ease;
+        }
+
+        .contact a {
+            color: #4ecca3;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .contact a:hover {
+            color: #2d3436;
+        }
     </style>
 </head>
 <body>
@@ -71,6 +125,9 @@
         <div class="logo">Passaros</div>
         <h1>Urban Solutions</h1>
         <p>We develop technology solutions to address modern urban challenges, creating smarter and more sustainable cities for tomorrow.</p>
+        <div class="contact">
+            <a href="mailto:paris@passaros.eu">paris@passaros.eu</a>
+        </div>
     </div>
 </body>
 </html>
