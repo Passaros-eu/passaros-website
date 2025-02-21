@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Passaros Systems</title>
-    <link rel="icon" type="image/png" href="favicon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Commissioner:wght@100..900&family=Iceland&family=Quantico:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
@@ -46,6 +45,20 @@
             position: relative;
             display: inline-block;
             animation: float 3s ease-in-out infinite;
+            background: linear-gradient(
+                to right,
+                #111111,
+                #111111 45%,
+                #4ecca3 50%,
+                #111111 55%,
+                #111111 100%
+            );
+            background-size: 200% 100%;
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            animation: float 3s ease-in-out infinite,
+                       gradient-flow 3s linear infinite;
         }
 
         h1 {
@@ -91,6 +104,15 @@
             }
             100% {
                 transform: translateY(0px);
+            }
+        }
+
+        @keyframes gradient-flow {
+            0% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: -100% 50%;
             }
         }
     </style>
