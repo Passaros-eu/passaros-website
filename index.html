@@ -3,10 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Passaros - Developing innovative technology for smarter, more sustainable urban environments.">
     <title>Passaros Systems</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Commissioner:wght@100..900&family=Iceland&family=Quantico:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🦜</text></svg>">
     <style>
         body {
             font-family: 'Quantico', sans-serif;
@@ -37,6 +39,12 @@
             border-radius: 16px;
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
             border: 1px solid #eaeaea;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .container:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 25px rgba(0, 0, 0, 0.08);
         }
 
         .logo {
@@ -87,11 +95,18 @@
             font-size: 1.1rem;
             color: #444444;
             opacity: 0.9;
-            transition: opacity 0.3s ease;
-            padding: 12px 20px;
+            transition: all 0.3s ease;
+            padding: 12px 24px;
             background-color: #f8f9fa;
             border-radius: 10px;
             display: inline-block;
+            border: 1px solid transparent;
+        }
+
+        .contact:hover {
+            background-color: #ffffff;
+            border-color: #4ecca3;
+            box-shadow: 0 4px 12px rgba(78, 204, 163, 0.15);
         }
 
         .contact a {
@@ -112,6 +127,27 @@
                 background-position: -100% 50%;
             }
         }
+
+        footer {
+            margin-top: 2rem;
+            font-size: 0.8rem;
+            color: #999;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 2rem 1.5rem;
+                margin: 0 15px;
+            }
+            
+            .logo {
+                font-size: 3rem;
+            }
+            
+            h1 {
+                font-size: 1.6rem;
+            }
+        }
     </style>
 </head>
 <body>
@@ -122,6 +158,7 @@
         <div class="contact">
             <a href="mailto:paris@passaros.eu">paris@passaros.eu</a>
         </div>
+        <footer>© 2023 Passaros. All rights reserved.</footer>
     </div>
 </body>
 </html>
