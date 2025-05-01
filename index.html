@@ -49,18 +49,47 @@
     }
 
     .brand {
+      position: relative;
       font-size: 2rem;
       font-weight: 500;
       color: #333;
       opacity: 0.9;
       letter-spacing: 0.5px;
+      height: 2.5rem;
+    }
+
+    .brand span {
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      transition: opacity 0.4s ease;
+    }
+
+    .coming {
+      opacity: 1;
+    }
+
+    .passaros {
+      opacity: 0;
+    }
+
+    .container:hover .coming {
+      opacity: 0;
+    }
+
+    .container:hover .passaros {
+      opacity: 1;
     }
   </style>
 </head>
 <body>
   <div class="container">
     <img src="logo.png" alt="Passaros Logo" class="logo-image" />
-    <div class="brand">Coming soon</div>
+    <div class="brand">
+      <span class="coming">Coming soon</span>
+      <span class="passaros">Passaros</span>
+    </div>
   </div>
 </body>
 </html>
